@@ -2,6 +2,20 @@
     .container {
         max-width: 900px;
     }
+    .carousel {
+        .carousel__inner{
+            img {
+                width: 50%;
+            }
+        }
+        .prev, .next {
+            left: 0px;
+        }
+        .next {
+            right: 0px;
+            left: auto;
+        }
+    }
 }
 
 @media (max-width: 992px) {
@@ -71,6 +85,9 @@
     &__descr {
         margin-top: 60px;
     }
+    }
+    .carousel {
+        padding: 50px 0;
     }
 }
 
@@ -144,6 +161,37 @@
             margin: 30px auto 0 auto;
         }
     }
+    .carousel {
+        padding: 45px 0;
+        &__inner {
+            img {
+                width: 70%;
+            }
+        }
+        .prev {
+            display: none;
+        }
+        .next {
+            display: none;
+        }
+        .tns-nav {
+            position: absolute;
+            bottom: -15%;
+            right: 50%;
+            transform: translateX(50%);
+            button {
+                border-radius: 100%;
+                background-color: $main-color;
+                height: 10px;
+                width: 5px;
+                border: none;
+                margin: 0 4px;
+            }
+            .tns-nav-active {
+                background-color: #000;
+            }
+        }
+    }
 }
 
 @media (max-width: 576px) {
@@ -207,6 +255,7 @@
     .consultation {
         padding: 35px 0 35px 0;
         min-height: 510px;
+        background-position: 55%;
         .title_left {
             font-size: 28px;
             line-height: 28px;
@@ -217,7 +266,7 @@
             font-size: 16px;
         }
         .feed-form {
-            width: 70%;
+            width: 260px;
             input {
                 height: 40px;
                 margin-bottom: 10px;
@@ -226,5 +275,10 @@
                 }
             }
         }
+    }
+    .carousel {
+        position: relative;
+        padding: 30px 0;
+        
     }
 }
