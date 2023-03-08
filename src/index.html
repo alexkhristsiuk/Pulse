@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    <section class="promo">
+    <section id="up" class="promo">
         <div class="container">
             <header class="header">
                 <a href="#" class="header__logo">
@@ -62,7 +63,7 @@
             <h2 class="advantage__header">НАШИ ПРЕИМУЩЕСТВА</h2>
             <div class="advantage__wrapper">
                 <div class="advantage__item">
-                    <img src="icons/cup.png" alt="cup">
+                    <img src="icons/cup.png" alt="cup" class="advantage__item_cup">
                     <div class="advantage__title">Делимся опытом</div>
                     <div class="advantage__desc">
                         Наши сотрудники всегда готовы поделиться своим опытом, 
@@ -70,7 +71,7 @@
                     </div>
                 </div>
                 <div class="advantage__item">
-                    <img src="icons/heart.png" alt="heart">
+                    <img src="icons/heart.png" alt="heart" class="advantage__item_animated">
                     <div class="advantage__title">Заботимся о здоровье</div>
                     <div class="advantage__desc">
                         Мы работаем для того, 
@@ -78,7 +79,7 @@
                     </div>
                 </div>
                 <div class="advantage__item">
-                    <img src="icons/shoe.png" alt="shoes">
+                    <img src="icons/shoe.png" alt="shoes" class="advantage__item_jump">
                     <div class="advantage__title">Учим бегать</div>
                     <div class="advantage__desc">
                         Помогаем с обучением правильной технике бега! 
@@ -107,17 +108,18 @@
         </div>
     </section>
 
-    <section class="carousel">
+    <div class="carousel">
         <div class="container">
             <div class="carousel__inner">
                 <div><img src="img/watch_slider1.png" alt="slide"></div>
                 <div><img src="img/watch_slider2.png" alt="slide"></div>
                 <div><img src="img/watch_slider3.png" alt="slide"></div>
             </div>
-            <button type="button" class="prev"><img src="icons/left.svg"></button>
-            <button type="button" class="next"><img src="icons/right.svg"></button>
+            <button type="button" class="prev"><img src="icons/left.svg" alt="arrow"></button>
+            <button type="button" class="next"><img src="icons/right.svg" alt="arrow"></button>
         </div>
-    </section>
+    </div>
+
     <section class="catalog" id="catalog" >
         <div class="container">
             <h2 class="title">Каталог пульсометров</h2>
@@ -141,7 +143,7 @@
                             <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
                             <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
                             <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
-                            <a href="#" class="catalog-item__back">НАЗАД</a>
+                            <li><a href="#" class="catalog-item__back">НАЗАД</a></li>
                         </ul>
                     </div>
                     <hr>
@@ -376,7 +378,7 @@
     <section class="reviews">
         <div class="container">
             <h2 class="title">отзывы клиентов</h2>
-            <div class="reviews__block">
+            <div class="reviews__block animate__animated animate__fadeInUp wow" data-wow-duration="1.5s" data-wow-delay="0.5s">
                 <img src="img/man1.png" alt="man1">
                 <div class="reviews__wrapper">
                     <div class="reviews__title">Ирина Иванченко </div>
@@ -391,7 +393,7 @@
                     </div>
                 </div>
             </div>
-            <div class="reviews__block">
+            <div class="reviews__block animate__animated animate__fadeInUp wow" data-wow-duration="1.5s" data-wow-delay="0.5s">
                 <img src="img/man2.png" alt="man2">
                 <div class="reviews__wrapper">
                     <div class="reviews__title">Иван Сёмочкин</div>
@@ -404,7 +406,7 @@
                     </div>
                 </div>
             </div>
-            <div class="reviews__block">
+            <div class="reviews__block animate__animated animate__fadeInUp wow" data-wow-duration="1.5s" data-wow-delay="0.5s">
                 <img src="img/man3.png" alt="man3">
                 <div class="reviews__wrapper">
                     <div class="reviews__title">Юлия Дашкина</div>
@@ -423,7 +425,7 @@
 
     <footer class="footer">
         <div class="footer__map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5790.00991334849!2d37.64531021324871!3d55.76761383850443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a636edcd2ad%3A0x4c2ca101e2c8c617!2z0JzRj9GB0L3QuNGG0LrQuNC5INC_0YAt0LQsIDQvMywg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8sIDEwNzA3OA!5e0!3m2!1sru!2sby!4v1677933824699!5m2!1sru!2sby" width="100%" height="630" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5790.00991334849!2d37.64531021324871!3d55.76761383850443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a636edcd2ad%3A0x4c2ca101e2c8c617!2z0JzRj9GB0L3QuNGG0LrQuNC5INC_0YAt0LQsIDQvMywg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8sIDEwNzA3OA!5e0!3m2!1sru!2sby!4v1677933824699!5m2!1sru!2sby" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         
         <div class="footer__info">
@@ -468,11 +470,15 @@
             <div class="modal__descr">Наш менеджер свяжется с вами в ближайшее время!</div>
         </div>
     </div>
+
+    <a href="#up" class="pageup"><img src="icons/up.svg" alt="up"></a>
+    
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

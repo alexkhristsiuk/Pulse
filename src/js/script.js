@@ -9,17 +9,23 @@
     container: '.carousel__inner',
     items: 1,
     slideBy: 'page',
+    nav: false,
     autoplay: false,
     controls: false,
-    nav: false,
     speed: 1200,
     responsive: {
         320: {
+          nav: true,
           edgePadding: 20,
-          gutter: 20,
+          gutter: 20, 
+        },
+        576: {
           nav: true,
         },
-        768: {
+        992: {
+          nav: false,
+        },
+        1200: {
             nav: false,
         }
     }    
@@ -99,22 +105,19 @@ validateForms('#order form');
 
 $('input[name=phone').mask("+7 (999) 999-9999");
 
-$('form').submit(function(e) {
-  e.preventDefault();
+//Smooth scroll and page up
 
-  if (!$(this).valid()) {
-    return;
+$(window).scroll(function(){
+  if($(this).scrollTop() > 1400) {
+    $('.pageup').fadeIn();
+  } else {
+    $('.pageup').fadeOut();
   }
+});
 
-  $ajax({
-    type: "POST",
-    url: "mailer/smart.php",
-    data: $(this).serialize()
-  }).done(function() {
-      $(this).find("input").val("");
-
-
-      $('form').trigger('reset');
-  });
+$("a[href^='#up']").click(function(){
+  const _href = $(this).attr("href");
+  $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
   return false;
 });
+new WOW().init();

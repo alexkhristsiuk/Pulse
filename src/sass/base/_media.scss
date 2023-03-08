@@ -98,6 +98,30 @@
     }
     .carousel {
         padding: 40px 0;
+
+        .prev {
+            display: none;
+        }
+        .next {
+            display: none;
+        }
+        .tns-nav {
+            position: absolute;
+            bottom: -15%;
+            right: 50%;
+            transform: translateX(50%);
+            button {
+                border-radius: 100%;
+                background-color: $main-color;
+                height: 10px;
+                width: 5px;
+                border: none;
+                margin: 0 4px;
+            }
+            .tns-nav-active {
+                background-color: #000;
+            }
+        }
     }
     .catalog {
         padding-bottom: 60px;
@@ -176,6 +200,10 @@
     }
     label.error {
         margin-bottom: 11px;
+    }
+    .pageup {
+        bottom: 30px;
+        right: 30px;
     }
 }
 
@@ -256,34 +284,7 @@
     }
     .carousel {
         padding: 45px 0;
-        &__inner {
-            img {
-                width: 70%;
-            }
-        }
-        .prev {
-            display: none;
-        }
-        .next {
-            display: none;
-        }
-        .tns-nav {
-            position: absolute;
-            bottom: -15%;
-            right: 50%;
-            transform: translateX(50%);
-            button {
-                border-radius: 100%;
-                background-color: $main-color;
-                height: 10px;
-                width: 5px;
-                border: none;
-                margin: 0 4px;
-            }
-            .tns-nav-active {
-                background-color: #000;
-            }
-        }
+        
     }
     .catalog {
         padding-bottom: 45px;
@@ -390,6 +391,12 @@
                 height: 37px;
             }
         }
+    }
+    .pageup {
+        bottom: 20px;
+        right: 20px;
+        width: 30px;
+        height: 30px;
     }
 }
 
@@ -625,5 +632,11 @@
     }
     label.error {
         margin-bottom: 10px;
+    }
+    .pageup {
+        bottom: 17px;
+        right: 8px;
+        width: 25px;
+        height: 25px;
     }
 }

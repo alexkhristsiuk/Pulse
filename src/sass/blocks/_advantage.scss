@@ -40,4 +40,24 @@
             color: #ff0000;
         }
     }
+    &__item {
+        &_animated {
+            animation: heartbeat 2s ease-in-out infinite;
+            &:hover {
+                animation-play-state: paused;
+            }
+        }
+        &_cup {
+            animation: cup 3.5s infinite;
+            &:hover {
+                animation-play-state: paused;
+            }
+        }
+        &_jump {
+            animation: jump 1.5s infinite;
+            &:hover {
+                animation-play-state: paused;
+            }
+        }
+    }
 }
