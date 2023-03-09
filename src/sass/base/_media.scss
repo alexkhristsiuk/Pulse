@@ -413,12 +413,12 @@
             display: none;
         }
         &__phone {
-            font-size: 12px;
+            font-size: 13px;
         }
     }
     .button {
-        width: 120px;
-        font-size: 10px;
+        width: 138px;
+        font-size: 11px;
         &_main {
             margin-top: 35px;
             width: 230px;
@@ -524,6 +524,11 @@
         }
         &__content {
             margin-top: 40px;
+            &_third {
+                .catalog-item {
+                    margin-right: 0;
+                }
+            }
         }
     }
     .reviews {
